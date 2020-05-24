@@ -16,7 +16,7 @@ open ipython3:
 >vim ~/.jupyter/jupyter_notebook_config.py
 #####** add these code on the last line **#####
  c.NotebookApp.ip = '*'
- c.NotebookApp.password = u'sha1:c9ecb5f6b909:eba87f92d7ba45a764b84f0b80bda364f34c2e5d'
+ c.NotebookApp.password = u'sha1:your sha1 code'
  c.NotebookApp.open_browser = False
  c.NotebookApp.port = 1111 ################ cluster port, any four number
  c.NotebookApp.enable_mathjax = True
