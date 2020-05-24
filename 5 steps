@@ -1,0 +1,52 @@
+#### a simple note
+# basically the same as the other online guides for jupyter in cluster 
+
+1: You need to make your account install Python3(Fudan cluster manual), pip3, wheel, jupyter.....
+
+2: open your Ipython to generate your sha1 code
+
+open ipython3:
+>from notebook.auth import passwd
+>passwd()
+>enter a new password
+=> find your sha1:*******************************
+
+3: modify your jupyter config
+
+>vim ~/.jupyter/jupyter_notebook_config.py
+#####** add these code on the last line **#####
+ c.NotebookApp.ip = '*'
+ c.NotebookApp.password = u'sha1:c9ecb5f6b909:eba87f92d7ba45a764b84f0b80bda364f34c2e5d'
+ c.NotebookApp.open_browser = False
+ c.NotebookApp.port = 1111 ################ cluster port, any four number
+ c.NotebookApp.enable_mathjax = True
+ c.NotebookApp.allow_remote_access = True
+ 
+ 
+ 4: on your personal computer
+ 
+ Win10: open your cmd
+ other:           terminal
+ 
+ >ssh -v -L 6666:localhost:7117 liuran@family.fudannhpcc.com.cn -p 34555
+ -----------****-----------****-******-************************----*****
+ --------local port-------- |  -- | ----------  |  ----------------- | -
+ ------------------cluster port-- | ----------  |  ----------------- | -
+ -----------------------------acccount--------  |  ----------------- | -
+ --------------------------------------fudan cluster IP address----- | -
+ ---------------------------------------------------------------IP port-
+ 
+ >enter your password
+ >jupyter notebook
+ 
+ 5:open your browser
+ 
+ visit: localhost:6666
+ 
+ 
+######   so easy, mother never worry about my study any more    ########
+#########################    Wish you enjoy    #########################
+ 
+ 
+ 
+ 
